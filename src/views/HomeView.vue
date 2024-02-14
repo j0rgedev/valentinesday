@@ -15,7 +15,7 @@ function validateField(value) {
 }
 
 const onSubmit = handleSubmit((values) => {
-  if (values.value && values.value.length > 0 && values.value.length <= 25) {
+  if (values.value && values.value.length > 0 && values.value.length <= 40) {
     console.log(values.value)
     router.push({name: 'valentine', params: {names: values.value}});
     resetForm();
@@ -41,7 +41,7 @@ const onSubmit = handleSubmit((values) => {
               id="username"
               v-model="value"
               class="w-full"
-              maxlength="25"
+              maxlength="40"
               :invalid="errorMessage"
           />
           <label for="username">Nombres</label>
